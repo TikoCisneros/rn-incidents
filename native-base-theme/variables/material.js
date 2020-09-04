@@ -5,6 +5,8 @@ import { Platform, Dimensions, PixelRatio } from 'react-native';
 
 import { PLATFORM } from './commonColor';
 
+import Palette from '../../src/styles/palette';
+
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
 const platform = Platform.OS;
@@ -22,15 +24,15 @@ export default {
 
   // Accordion
   headerStyle: '#edebed',
-  iconStyle: '#000',
+  iconStyle: Palette.black,
   contentStyle: '#f5f4f5',
-  expandedIconStyle: '#000',
+  expandedIconStyle: Palette.black,
   accordionBorderColor: '#d3d3d3',
 
   // ActionSheet
   elevation: 4,
   containerTouchableBackgroundColor: 'rgba(0,0,0,0.4)',
-  innerTouchableBackgroundColor: '#fff',
+  innerTouchableBackgroundColor: Palette.white,
   listItemHeight: 50,
   listItemBorderColor: 'transparent',
   marginHorizontal: -15,
@@ -48,7 +50,7 @@ export default {
 
   // Badge
   badgeBg: '#ED1727',
-  badgeColor: '#fff',
+  badgeColor: Palette.white,
   badgePadding: 0,
 
   // Button
@@ -105,7 +107,7 @@ export default {
   },
 
   // Card
-  cardDefaultBg: '#fff',
+  cardDefaultBg: Palette.white,
   cardBorderColor: '#ccc',
   cardBorderRadius: 2,
   cardItemPadding: platform === PLATFORM.IOS ? 10 : 12,
@@ -120,22 +122,22 @@ export default {
   CheckboxFontSize: 17,
   checkboxBgColor: '#039BE5',
   checkboxSize: 20,
-  checkboxTickColor: '#fff',
+  checkboxTickColor: Palette.white,
 
   // Color
-  brandPrimary: '#48bb78',
-  brandInfo: '#62B1F6',
-  brandSuccess: '#5cb85c',
-  brandDanger: '#d9534f',
-  brandWarning: '#f0ad4e',
-  brandDark: '#000',
-  brandLight: '#a9a9a9',
+  brandPrimary: Palette.primary500,
+  brandInfo: Palette.info,
+  brandSuccess: Palette.success,
+  brandDanger: Palette.danger,
+  brandWarning: Palette.warning,
+  brandDark: Palette.black,
+  brandLight: Palette.darkGrey400,
 
   // Container
-  containerBgColor: '#fff',
+  containerBgColor: Palette.white,
 
   // Date Picker
-  datePickerTextColor: '#000',
+  datePickerTextColor: Palette.black,
   datePickerBg: 'transparent',
 
   // FAB
@@ -157,37 +159,33 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: '#48bb78',
+  footerDefaultBg: Palette.primary500,
   footerPaddingBottom: 0,
 
   // FooterTab
-  tabBarTextColor: '#bfc6ea',
+  tabBarTextColor: Palette.primary300,
   tabBarTextSize: 11,
-  activeTab: '#fff',
-  sTabBarActiveTextColor: '#007aff',
-  tabBarActiveTextColor: '#fff',
-  tabActiveBgColor: '#48bb78',
+  activeTab: Palette.white,
+  sTabBarActiveTextColor: Palette.strongBlue500,
+  tabBarActiveTextColor: Palette.white,
+  tabActiveBgColor: Palette.primary500,
 
   // Header
-  toolbarBtnColor: '#fff',
-  toolbarDefaultBg: '#48bb78',
+  toolbarBtnColor: Palette.white,
+  toolbarDefaultBg: Palette.primary500,
   toolbarHeight: 56,
   toolbarSearchIconSize: 23,
-  toolbarInputColor: '#fff',
+  toolbarInputColor: Palette.white,
   searchBarHeight: platform === PLATFORM.IOS ? 30 : 40,
   searchBarInputHeight: platform === PLATFORM.IOS ? 40 : 50,
-  toolbarBtnTextColor: '#fff',
-  toolbarDefaultBorder: '#48bb78',
+  toolbarBtnTextColor: Palette.white,
+  toolbarDefaultBorder: Palette.primary500,
   iosStatusbar: 'light-content',
   get statusBarColor() {
-    return color(this.toolbarDefaultBg)
-      .darken(0.2)
-      .hex();
+    return color(this.toolbarDefaultBg).darken(0.2).hex();
   },
   get darkenHeader() {
-    return color(this.tabBgColor)
-      .darken(0.03)
-      .hex();
+    return color(this.tabBgColor).darken(0.03).hex();
   },
 
   // Icon
@@ -223,7 +221,7 @@ export default {
   listItemPadding: 12,
   listNoteColor: '#808080',
   listNoteSize: 13,
-  listItemSelected: '#48bb78',
+  listItemSelected: Palette.primary500,
 
   // Progress Bar
   defaultProgressColor: '#E4202D',
@@ -231,38 +229,38 @@ export default {
 
   // Radio Button
   radioBtnSize: 23,
-  radioSelectedColorAndroid: '#48bb78',
+  radioSelectedColorAndroid: Palette.primary500,
   radioBtnLineHeight: 24,
   get radioColor() {
     return this.brandPrimary;
   },
 
   // Segment
-  segmentBackgroundColor: '#48bb78',
-  segmentActiveBackgroundColor: '#fff',
-  segmentTextColor: '#fff',
-  segmentActiveTextColor: '#48bb78',
-  segmentBorderColor: '#fff',
-  segmentBorderColorMain: '#48bb78',
+  segmentBackgroundColor: Palette.primary500,
+  segmentActiveBackgroundColor: Palette.white,
+  segmentTextColor: Palette.white,
+  segmentActiveTextColor: Palette.primary500,
+  segmentBorderColor: Palette.white,
+  segmentBorderColorMain: Palette.primary500,
 
   // Spinner
   defaultSpinnerColor: '#45D56E',
   inverseSpinnerColor: '#1A191B',
 
   // Tab
-  tabDefaultBg: '#48bb78',
+  tabDefaultBg: Palette.primary500,
   topTabBarTextColor: '#b3c7f9',
-  topTabBarActiveTextColor: '#fff',
-  topTabBarBorderColor: '#fff',
-  topTabBarActiveBorderColor: '#fff',
+  topTabBarActiveTextColor: Palette.white,
+  topTabBarBorderColor: Palette.white,
+  topTabBarActiveBorderColor: Palette.white,
 
   // Tabs
   tabBgColor: '#F8F8F8',
   tabFontSize: 15,
 
   // Text
-  textColor: '#000',
-  inverseTextColor: '#fff',
+  textColor: Palette.black,
+  inverseTextColor: Palette.white,
   noteFontSize: 14,
   get defaultTextColor() {
     return this.textColor;
@@ -272,8 +270,8 @@ export default {
   titleFontfamily: 'Roboto',
   titleFontSize: 19,
   subTitleFontSize: 14,
-  subtitleColor: '#FFF',
-  titleFontColor: '#FFF',
+  subtitleColor: Palette.white,
+  titleFontColor: Palette.white,
 
   // Other
   borderRadiusBase: 2,
@@ -292,13 +290,13 @@ export default {
       topInset: 24,
       leftInset: 0,
       rightInset: 0,
-      bottomInset: 34
+      bottomInset: 34,
     },
     landscape: {
       topInset: 0,
       leftInset: 44,
       rightInset: 44,
-      bottomInset: 21
-    }
-  }
+      bottomInset: 21,
+    },
+  },
 };
