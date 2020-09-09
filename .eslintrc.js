@@ -5,9 +5,10 @@ module.exports = {
   plugins: ['no-null'],
   rules: {
     'no-null/no-null': ['error'],
-    'indent': ['error', 2],
+    'indent': ['error', 2, { "SwitchCase": 1 }],
     'import/no-extraneous-dependencies': 'off',
     'react-native/no-inline-styles': 'off',
+    'react/forbid-prop-types': 'off',
     'quotes': 'error',
     'max-len': [
       'error', {
