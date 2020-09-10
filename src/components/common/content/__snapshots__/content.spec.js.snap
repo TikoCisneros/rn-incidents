@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content components should render Content successfully 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginBottom": 0,
+        "marginLeft": "5%",
+        "marginRight": "5%",
+        "marginTop": 0,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Content components should render ScrollableContent successfully 1`] = `
+<RCTScrollView
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginBottom": 0,
+        "marginLeft": "5%",
+        "marginRight": "5%",
+        "marginTop": 0,
+      },
+    ]
+  }
+>
+  <View />
+</RCTScrollView>
+`;
