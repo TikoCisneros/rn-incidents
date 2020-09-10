@@ -71,6 +71,14 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|@codler/react-native-keyboard-aware-scroll-view|@react-native-community/.*|react-navigation|@react-navigation/.*|native-base)"
     ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "native-base-theme",
+      "storybook",
+      "(.styles)\\.(js)$",
+      "src/styles",
+      "index\\.(js)$"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>setup-tests.js",
       "./node_modules/jest-enzyme/lib/index.js"
