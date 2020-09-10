@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
 
-import { Button, Text, StyleProvider, Item, Input } from 'native-base';
+import { Button, Text, StyleProvider } from 'native-base';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -13,10 +13,13 @@ import { SvgUri } from 'react-native-svg';
 
 import { Formik } from 'formik';
 
+import Input from './src/components/common/input/input';
+
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material';
 
-import Meme from './meme.svg';
+import Meme from './src/res/svg/meme.svg';
+import Icons from './src/styles/icons';
 
 const NavScreens = {
   Login: 'Login',
@@ -64,21 +67,28 @@ const HomeScreen = ({ navigation: { push } }) => (
 
 const FormScreen = () => (
   <Content>
-    <Formik initialValues={{ email: '' }} onSubmit={(values) => alert(JSON.stringify(values))}>
+    <Formik initialValues={{ usr: '', pwd: '' }} onSubmit={(values) => alert(JSON.stringify(values))}>
       {({ handleChange, handleBlur, handleSubmit, values }) => (
-        <View>
-          <Item regular>
-            <Input
-              onChangeText={handleChange('email')}
-              onBlur={handleBlur('email')}
-              value={values.email}
-              placeholder="Enter your email"
-            />
-          </Item>
+        <>
+          <Input
+            onChangeText={handleChange('usr')}
+            onBlur={handleBlur('usr')}
+            value={values.usr}
+            placeholder="Enter your username"
+            iconName={Icons.user}
+          />
+          <Input
+            onChangeText={handleChange('pwd')}
+            onBlur={handleBlur('pwd')}
+            value={values.pwd}
+            placeholder="Enter your password"
+            secureTextEntry
+            iconName={Icons.lock}
+          />
           <Button onPress={handleSubmit}>
             <Text>Submit</Text>
           </Button>
-        </View>
+        </>
       )}
     </Formik>
   </Content>

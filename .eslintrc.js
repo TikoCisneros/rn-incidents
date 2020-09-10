@@ -17,4 +17,16 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
   },
+  overrides: [
+    {
+      files: [
+        '**/*.spec.js',
+        '**/*.spec.jsx',
+        '**/*.stories.js'
+      ],
+      env: {
+        'jest': true
+      }
+    }
+  ]
 };
