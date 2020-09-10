@@ -8,10 +8,47 @@ exports[`Content components should render Content successfully 1`] = `
         "flexBasis": 0,
         "flexGrow": 1,
         "flexShrink": 1,
-        "marginBottom": 0,
-        "marginLeft": "5%",
-        "marginRight": "5%",
-        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": 0,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Content components should render LinearBgContent successfully 1`] = `
+<BVLinearGradient
+  colors={
+    Array [
+      4286578816,
+      4294967295,
+    ]
+  }
+  endPoint={
+    Object {
+      "x": 1,
+      "y": 1,
+    }
+  }
+  locations={null}
+  startPoint={
+    Object {
+      "x": 0,
+      "y": 0,
+    }
+  }
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": 0,
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": 0,
       },
     ]
   }
@@ -26,10 +63,10 @@ exports[`Content components should render ScrollableContent successfully 1`] = `
         "flexBasis": 0,
         "flexGrow": 1,
         "flexShrink": 1,
-        "marginBottom": 0,
-        "marginLeft": "5%",
-        "marginRight": "5%",
-        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": 0,
       },
     ]
   }

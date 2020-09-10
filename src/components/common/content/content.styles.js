@@ -3,7 +3,7 @@ import { css } from 'styled-components/native';
 
 const contentStyles = css`
   flex: 1;
-  margin: 0 5%;
+  padding: 0 5%;
 `;
 
 export { contentStyles };

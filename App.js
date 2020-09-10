@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import React from 'react';
 import styled from 'styled-components/native';
-import { SafeAreaView, ScrollView, StatusBar, View } from 'react-native';
+import { SafeAreaView, StatusBar, View } from 'react-native';
 
 import { Button, Text, StyleProvider } from 'native-base';
 
@@ -14,6 +14,7 @@ import { SvgUri } from 'react-native-svg';
 import { Formik } from 'formik';
 
 import Input from './src/components/common/input/input';
+import { LinearBgContent } from './src/components/common/content';
 
 import getTheme from './native-base-theme/components';
 import material from './native-base-theme/variables/material';
@@ -31,23 +32,18 @@ const SafeArea = styled(SafeAreaView)`
   flex: 1;
 `;
 
-const ScrollContent = styled(ScrollView)`
-  flex: 1;
-  margin: 0 5%;
-`;
-
 const Content = styled(View)`
   flex: 1;
   margin: 0 5%;
 `;
 
 const LoginScreen = ({ navigation: { push } }) => (
-  <ScrollContent>
+  <LinearBgContent colors={['purple', 'white']}>
     <Text>Login Screen</Text>
     <Button onPress={() => push(NavScreens.Home)}>
       <Text>Click Me!</Text>
     </Button>
-  </ScrollContent>
+  </LinearBgContent>
 );
 
 const HomeScreen = ({ navigation: { push } }) => (
