@@ -12,14 +12,12 @@ Button.propTypes = {
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
-  style: PropTypes.object,
   block: PropTypes.bool,
 };
 
 Button.defaultProps = {
   onPress: undefined,
   disabled: false,
-  style: undefined,
   block: true,
 };
 

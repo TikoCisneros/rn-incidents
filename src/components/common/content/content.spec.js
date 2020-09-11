@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Content, ScrollableContent, LinearBgContent } from './content';
+import { Content, ScrollableContent, SafeArea, KeyboardAvoider } from './content';
 
 describe('Content components', () => {
   it('should render Content successfully', () => {
@@ -15,8 +15,13 @@ describe('Content components', () => {
     const tree = renderer.create(component).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  it('should render LinearBgContent successfully', () => {
-    const component = <LinearBgContent colors={['purple', 'white']} />;
+  it('should render SafeArea successfully', () => {
+    const component = <SafeArea />;
+    const tree = renderer.create(component).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render KeyboardAvoider successfully', () => {
+    const component = <KeyboardAvoider />;
     const tree = renderer.create(component).toJSON();
     expect(tree).toMatchSnapshot();
   });

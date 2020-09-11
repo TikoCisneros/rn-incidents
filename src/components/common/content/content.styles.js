@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { css } from 'styled-components/native';
 
 const contentStyles = css`
@@ -6,4 +5,8 @@ const contentStyles = css`
   padding: 0 5%;
 `;
 
-export { contentStyles };
+const fullScreenStyles = css`
+  flex: 1;
+`;
+
+export { contentStyles, fullScreenStyles };

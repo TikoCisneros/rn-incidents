@@ -15,7 +15,9 @@ module.exports = {
         'code': 120
       }
     ],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
+    'react/jsx-closing-bracket-location': [1, {selfClosing: 'line-aligned', nonEmpty: 'after-props'}],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    'react/prop-types': [1, { 'ignore': ['style', 'otherProps']}]
   },
   overrides: [
     {
