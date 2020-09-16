@@ -51,11 +51,13 @@ const Typography = styled.Text`
   font-size: ${(props) => getFontSize(props.type)};
   font-family: Roboto;
   color: ${(props) => props.color ?? Palette.grayPrincipal};
+  font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
 `;
 
 Typography.propTypes = {
   color: PropTypes.string,
   type: PropTypes.string,
+  bold: PropTypes.bool,
 };
 
 export default Typography;

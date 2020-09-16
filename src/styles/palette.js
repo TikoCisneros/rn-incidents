@@ -1,13 +1,13 @@
 const Palette = {
   /* Primary */
-  primary300: '#A6DEBD',
+  primary300: '#D2EEDE',
   primary500: '#48bb78',
   primary700: '#3DA468',
 
   /* Accent */
-  secondary300: '#C5CAE9',
-  secondary500: '#3F51B5',
-  secondary700: '#303F9F',
+  secondary300: '#ECE3F2',
+  secondary500: '#804ba1',
+  secondary700: '#583370',
 
   /* Gray Scale Old */
   black: '#070707',

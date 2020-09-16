@@ -17,7 +17,8 @@ module.exports = {
     ],
     'react/jsx-closing-bracket-location': [1, {selfClosing: 'line-aligned', nonEmpty: 'after-props'}],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
-    'react/prop-types': [1, { 'ignore': ['style', 'otherProps']}]
+    'react/prop-types': [1, { 'ignore': ['style', 'otherProps', 'navigation']}],
+    'react/jsx-props-no-spreading': 'off',
   },
   overrides: [
     {

@@ -80,7 +80,10 @@
       "src/styles",
       "(.styles)\\.(js)$",
       "(.stories)\\.(js)$",
-      "index\\.(js)$"
+      "index\\.(js)$",
+      "src/navigation/",
+      "src/styles/",
+      "src/res/"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>setup-tests.js",

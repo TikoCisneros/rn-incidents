@@ -9,6 +9,8 @@ configure(() => {
   require('../src/components/common/typography/typography.stories');
   require('../src/components/common/input/input.stories');
   require('../src/components/common/button/button.stories');
+  require('../src/components/incidents/incident/incident.stories');
+  require('../src/components/incidents/incidents.stories');
 }, module);
 
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
