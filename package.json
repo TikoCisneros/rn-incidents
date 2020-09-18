@@ -29,6 +29,7 @@
     "react-native-reanimated": "^1.13.0",
     "react-native-safe-area-context": "^3.1.7",
     "react-native-screens": "^2.10.1",
+    "react-native-skeleton-placeholder": "^2.0.7",
     "react-native-svg": "^12.1.0",
     "styled-components": "5.1.1",
     "yup": "^0.29.3"
@@ -72,7 +73,9 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|@codler/react-native-keyboard-aware-scroll-view|@react-native-community/.*|react-navigation|@react-navigation/.*|native-base)"
     ],
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
     "coveragePathIgnorePatterns": [
       "node_modules",
       "native-base-theme",
@@ -83,7 +86,8 @@
       "index\\.(js)$",
       "src/navigation/",
       "src/styles/",
-      "src/res/"
+      "src/res/",
+      "src/models/"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>setup-tests.js",

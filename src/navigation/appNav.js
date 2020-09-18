@@ -3,6 +3,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import Theme from './theme';
+
 import Login from '../screens/login';
 import Home from '../screens/home';
 
@@ -11,7 +13,7 @@ import { AppScreens } from './screens';
 const Stack = createStackNavigator();
 
 const AppNav = () => (
-  <NavigationContainer>
+  <NavigationContainer theme={Theme}>
     <Stack.Navigator>
       <Stack.Screen
         name={AppScreens.Login}

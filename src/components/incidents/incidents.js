@@ -9,7 +9,9 @@ const Incidents = ({ incidents }) => {
 
   return (
     <>
-      <IncidentTitle type={TYPOGRAPHY_TYPES.HEADING_5}>Incidencias</IncidentTitle>
+      <IncidentTitle type={TYPOGRAPHY_TYPES.HEADING_3}>
+        Incidencias
+      </IncidentTitle>
       <IncidentsList
         data={incidents}
         renderItem={renderItem}
