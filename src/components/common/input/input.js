@@ -1,7 +1,8 @@
 import React from 'react';
-import { Input as NBInput, Icon } from 'native-base';
+import { Input as NBInput } from 'native-base';
 import PropTypes from 'prop-types';
 
+import Icon from '../icon';
 import { ErrorLabel, InputContainer, iconStyle } from './input.styles';
 
 const Input = ({
@@ -19,7 +20,7 @@ const Input = ({
 }) => (
   <>
     <InputContainer regular style={itemStyle} error={isError}>
-      {iconName && <Icon style={iconStyle} type="AntDesign" name={iconName} />}
+      {iconName && <Icon style={iconStyle} name={iconName} />}
       <NBInput
         style={inputStyle}
         onChangeText={onChangeText}

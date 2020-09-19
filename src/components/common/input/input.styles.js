@@ -14,6 +14,6 @@ const InputContainer = styled(Item)`
   margin: 10px 0 5px;
 `;
 
-const iconStyle = { color: Palette.darkGrey400 };
+const iconStyle = { color: Palette.darkGrey400, paddingLeft: 10 };
 
 export { ErrorLabel, InputContainer, iconStyle };

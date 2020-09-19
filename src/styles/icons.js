@@ -1,6 +1,6 @@
 const Icons = {
-  lock: 'lock',
-  user: 'user',
+  lock: 'key',
+  user: 'person',
   add: 'plus',
 };
 

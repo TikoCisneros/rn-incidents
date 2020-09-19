@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component renders correctly 1`] = `
+<Icon
+  allowFontScaling={false}
+  name="person"
+  size={12}
+  style={
+    Array [
+      undefined,
+      Object {
+        "fontSize": 20,
+      },
+    ]
+  }
+/>
+`;
