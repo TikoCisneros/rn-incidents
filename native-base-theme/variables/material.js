@@ -88,7 +88,7 @@ export default {
     return this.inverseTextColor;
   },
   get buttonTextSize() {
-    return this.fontSizeBase - 1;
+    return this.fontSizeBase + 1;
   },
   get buttonTextSizeLarge() {
     return this.fontSizeBase * 1.5;

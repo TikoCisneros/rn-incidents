@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const Button = ({ title, onPress, disabled, block, style }) => (
   <NBButton block={block} onPress={onPress} disabled={disabled} style={style}>
-    <Text>{title}</Text>
+    <Text uppercase={false}>
+      {title}
+    </Text>
   </NBButton>
 );
 

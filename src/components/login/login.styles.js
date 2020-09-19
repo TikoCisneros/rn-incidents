@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
 
 import { Content } from '../common/content';
 import Button from '../common/button';
@@ -13,10 +14,14 @@ const ContentContainer = styled(Content)`
   justify-content: center;
 `;
 
+const { width } = Dimensions.get('window');
+
 const LogoContainer = styled.View`
   position: absolute;
-  top: -70px;
-  left: 125px;
+  top: -65px;
+  width: ${(width * 9) / 10}px;
+  justify-content: center;
+  flex-direction: row;
 `;
 
 const FormContainer = styled.View`
