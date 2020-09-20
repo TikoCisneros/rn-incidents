@@ -15,6 +15,7 @@ const DefaultNavOptions = {
     backgroundColor: Palette.primary500,
     borderBottomWidth: 1.5,
     borderBottomColor: Palette.darkGrey300,
+    height: 56,
   },
   headerTintColor: Palette.white,
   headerTitleStyle: {

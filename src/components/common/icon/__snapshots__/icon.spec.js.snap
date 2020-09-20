@@ -7,10 +7,10 @@ exports[`Icon component renders correctly 1`] = `
   size={12}
   style={
     Array [
-      undefined,
       Object {
         "fontSize": 20,
       },
+      undefined,
     ]
   }
 />
