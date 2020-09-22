@@ -88,6 +88,9 @@ const Palette = {
   darkGrayishBlue700: '#b5bfd6',
   darkGrayishBlue800: '#adb8d1',
   darkGrayishBlue900: '#a4b0cb',
+
+  /* RGBA grey models http://www.flatuicolorpicker.com/grey-rgba-color-model */
+  outerSpace: 'rgba(46, 49, 49, 0.3)',
 };
 
 export default Palette;

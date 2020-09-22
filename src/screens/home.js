@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HomeComponent from '../components/home';
 
 const userName = 'admin';
@@ -11,8 +11,18 @@ const incidentsData = Array(30)
     status: 'Pending',
   }));
 
-const Home = () => (
-  <HomeComponent userName={userName} incidents={incidentsData} />
-);
+const Home = () => {
+  const [promptVisible, setPromptVisible] = useState(false);
+
+  return (
+    <HomeComponent
+      userName={userName}
+      incidents={incidentsData}
+      promptVisible={promptVisible}
+      onShowPrompt={() => setPromptVisible(true)}
+      onHidePrompt={() => setPromptVisible(false)}
+    />
+  );
+};
 
 export default Home;

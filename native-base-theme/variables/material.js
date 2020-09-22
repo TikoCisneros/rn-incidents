@@ -131,7 +131,7 @@ export default {
   brandDanger: Palette.danger,
   brandWarning: Palette.warning,
   brandDark: Palette.black,
-  brandLight: Palette.darkGrey400,
+  brandLight: Palette.secondary500,
 
   // Container
   containerBgColor: Palette.white,
