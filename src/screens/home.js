@@ -21,6 +21,7 @@ const Home = () => {
       promptVisible={promptVisible}
       onShowPrompt={() => setPromptVisible(true)}
       onHidePrompt={() => setPromptVisible(false)}
+      onAddIncidentPress={() => setPromptVisible(true)}
     />
   );
 };

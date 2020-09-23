@@ -1,13 +1,13 @@
 import React from 'react';
 import { Icon } from 'native-base';
+import PropTypes from 'prop-types';
 
 import Greeting from './greeting';
 import Incidents from '../incidents';
-import MessagePrompt from '../messagePrompt';
+import InfoPrompt from './infoPrompt';
 import { FabButton } from './home.styles';
 
 import Icons from '../../styles/icons';
-import { PROMPT_TYPES } from '../../common/constants';
 
 const Home = ({
   userName,
@@ -27,14 +27,17 @@ const Home = ({
       onPress={onAddIncidentPress}>
       <Icon type="AntDesign" name={Icons.add} />
     </FabButton>
-    <MessagePrompt
-      type={PROMPT_TYPES.error}
-      visible={promptVisible}
-      onHideModal={onHidePrompt}
-      title="Titulo"
-      description="Es personal y puedes usarla para ingresar o hacer tus transacciones en tu Banca web. ¡No la compartas con nadie!"
-    />
+    <InfoPrompt visible={promptVisible} onHidePrompt={onHidePrompt} />
   </>
 );
+
+Home.propTypes = {
+  userName: PropTypes.string.isRequired,
+  incidents: PropTypes.array.isRequired,
+  promptVisible: PropTypes.bool.isRequired,
+  onAddIncidentPress: PropTypes.func.isRequired,
+  onShowPrompt: PropTypes.func.isRequired,
+  onHidePrompt: PropTypes.func.isRequired,
+};
 
 export default Home;

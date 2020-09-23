@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { TYPOGRAPHY_TYPES } from '../common/typography';
 import Modal from '../common/modal';
-import Button from '../common/button';
 
 import {
   PromptIcon,
   PromptTitle,
   PromptDescription,
+  Button,
   containerStyles,
 } from './messagePrompt.styles';
 import Icons from '../../styles/icons';

@@ -3,6 +3,7 @@ import Palette from '../../styles/palette';
 
 import Icon from '../common/icon';
 import Typography from '../common/typography';
+import ButtonComponent from '../common/button';
 
 const PromptIcon = styled(Icon)`
   color: ${(props) => Palette[props.colorType]};
@@ -11,13 +12,17 @@ const PromptIcon = styled(Icon)`
 
 const PromptTitle = styled(Typography)`
   color: ${(props) => Palette[props.colorType]};
+  margin-bottom: 20px;
 `;
 
 const PromptDescription = styled(Typography)`
   text-align: justify;
-  margin: 10px 0 25px;
 `;
 
 const containerStyles = { alignItems: 'center' };
 
-export { PromptIcon, PromptTitle, PromptDescription, containerStyles };
+const Button = styled(ButtonComponent)`
+  margin-top: 15px;
+`;
+
+export { PromptIcon, PromptTitle, PromptDescription, Button, containerStyles };
