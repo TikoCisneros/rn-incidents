@@ -8,6 +8,7 @@ import InfoPrompt from './infoPrompt';
 import { FabButton } from './home.styles';
 
 import Icons from '../../styles/icons';
+import { STATUS_TYPES } from '../../common/constants';
 
 const Home = ({
   userName,
@@ -19,7 +20,7 @@ const Home = ({
 }) => (
   <>
     <Greeting userName={userName} onPressInfo={onShowPrompt} />
-    <Incidents incidents={incidents} />
+    <Incidents incidents={incidents} loadStatus={STATUS_TYPES.success} />
     <FabButton
       active
       direction="up"

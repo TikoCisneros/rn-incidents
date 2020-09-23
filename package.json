@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "android:storybook-reverse": "adb reverse tcp:7007 tcp:7007",
     "storybook": "yarn run android:storybook-reverse; start-storybook -p 7007",
+    "storybook:start": "start-storybook -p 7007",
     "build-storybook": "build-storybook"
   },
   "dependencies": {

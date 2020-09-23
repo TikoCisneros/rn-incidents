@@ -6,6 +6,7 @@ import './rn-addons';
 
 // import stories
 configure(() => {
+  require('../src/components/common/skeletons/list/listItem/listItem.stories');
   require('../src/components/common/typography/typography.stories');
   require('../src/components/common/input/input.stories');
   require('../src/components/common/button/button.stories');

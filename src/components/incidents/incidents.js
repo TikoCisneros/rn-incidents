@@ -1,5 +1,6 @@
 import React from 'react';
 import Incident from './incident';
+import ListSkeleton from '../common/skeletons/list';
 
 import {
   IncidentsList,
@@ -8,8 +9,9 @@ import {
 } from './incidents.styles';
 
 import { TYPOGRAPHY_TYPES } from '../common/typography';
+import { STATUS_TYPES } from '../../common/constants';
 
-const Incidents = ({ incidents }) => {
+const Incidents = ({ incidents, loadStatus }) => {
   const renderItem = ({ item }) => <Incident {...item} />;
 
   return (
@@ -17,11 +19,15 @@ const Incidents = ({ incidents }) => {
       <IncidentTitle type={TYPOGRAPHY_TYPES.HEADING_3}>
         Incidencias
       </IncidentTitle>
-      <IncidentsList
-        data={incidents}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
+      <ListSkeleton
+        numberOfItems={8}
+        isLoading={loadStatus === STATUS_TYPES.wait}>
+        <IncidentsList
+          data={incidents}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </ListSkeleton>
     </ListContainer>
   );
 };
