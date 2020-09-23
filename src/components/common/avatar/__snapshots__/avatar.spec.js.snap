@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component renders correctly 1`] = `
+<Styled(View)
+  style={
+    Object {
+      "borderRadius": 20,
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <Styled(Styled(Text))
+    type="HEADING_2"
+  >
+    A
+  </Styled(Styled(Text))>
+</Styled(View)>
+`;

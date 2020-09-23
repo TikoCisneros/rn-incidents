@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { TYPOGRAPHY_TYPES } from '../../common/typography';
 import Avatar from '../../common/avatar';
@@ -24,5 +25,10 @@ const Greeting = ({ userName, onPressInfo }) => (
     </TouchableOpacity>
   </Container>
 );
+
+Greeting.propTypes = {
+  userName: PropTypes.string.isRequired,
+  onPressInfo: PropTypes.func.isRequired,
+};
 
 export default Greeting;
