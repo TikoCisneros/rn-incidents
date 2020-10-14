@@ -4,7 +4,6 @@ module.exports = {
   extends: ['@react-native-community', 'airbnb', 'airbnb/hooks', 'prettier'],
   plugins: ['no-null'],
   rules: {
-    'no-null/no-null': ['error'],
     'indent': ['error', 2, { "SwitchCase": 1 }],
     'import/no-extraneous-dependencies': 'off',
     'react-native/no-inline-styles': 'off',
