@@ -4,7 +4,7 @@ module.exports = {
   extends: ['@react-native-community', 'airbnb', 'airbnb/hooks', 'prettier'],
   plugins: ['no-null'],
   rules: {
-    'indent': ['error', 2, { "SwitchCase": 1 }],
+    'indent': ['error', 2, { 'SwitchCase': 1 }],
     'import/no-extraneous-dependencies': 'off',
     'react-native/no-inline-styles': 'off',
     'react/forbid-prop-types': 'off',
@@ -17,6 +17,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': [1, {selfClosing: 'line-aligned', nonEmpty: 'after-props'}],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'react/prop-types': [1, { 'ignore': ['style', 'otherProps', 'navigation', 'containerStyle', 'children']}],
+    'react-hooks/exhaustive-deps': 'off',
     'react/jsx-props-no-spreading': 'off',
   },
   overrides: [

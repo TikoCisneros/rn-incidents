@@ -36,7 +36,7 @@ function* doLogin(action) {
       callback();
     }
   } catch (_error) {
-    put(ERROR_LOGIN.action());
+    yield put(ERROR_LOGIN.action());
   }
 }
 

@@ -87,13 +87,13 @@
       "node_modules",
       "native-base-theme",
       "storybook",
-      "src/styles",
       "(.styles)\\.(js)$",
       "(.stories)\\.(js)$",
       "index\\.(js)$",
       "src/navigation/",
       "src/styles/",
       "src/res/",
+      "src/api/",
       "src/models/"
     ],
     "setupFilesAfterEnv": [

@@ -8,7 +8,6 @@ import InfoPrompt from './infoPrompt';
 import { FabButton } from './home.styles';
 
 import Icons from '../../styles/icons';
-import { STATUS_TYPES } from '../../common/constants';
 
 const Home = ({
   userName,
@@ -17,10 +16,11 @@ const Home = ({
   onAddIncidentPress,
   onShowPrompt,
   onHidePrompt,
+  loadStatus,
 }) => (
   <>
     <Greeting userName={userName} onPressInfo={onShowPrompt} />
-    <Incidents incidents={incidents} loadStatus={STATUS_TYPES.success} />
+    <Incidents incidents={incidents} loadStatus={loadStatus} />
     <FabButton
       active
       direction="up"
@@ -39,6 +39,7 @@ Home.propTypes = {
   onAddIncidentPress: PropTypes.func.isRequired,
   onShowPrompt: PropTypes.func.isRequired,
   onHidePrompt: PropTypes.func.isRequired,
+  loadStatus: PropTypes.string.isRequired,
 };
 
 export default Home;

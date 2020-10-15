@@ -8,6 +8,7 @@ const STATUS_TYPES = {
   wait: 'statusWait',
   success: 'statusSuccess',
   error: 'statusError',
+  none: 'statusNone',
 };
 
 export { PROMPT_TYPES, STATUS_TYPES };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LinearGradient from 'react-native-linear-gradient';
 import { Formik } from 'formik';
 
@@ -67,6 +68,8 @@ const Login = ({ onSubmit }) => {
     </LinearGradient>
   );
 };
+
+Login.propTypes = { onSubmit: PropTypes.func.isRequired };
 
 export default Login;
 
