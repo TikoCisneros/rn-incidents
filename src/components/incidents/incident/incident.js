@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { numerationsRemoval } from '../../../helpers/util';
+import { numerationsRemoval } from '../../../common/util';
 import Typography, { TYPOGRAPHY_TYPES } from '../../common/typography';
 
 import { IncidentContainer, IncidentStatus } from './incident.styles';

@@ -11,6 +11,9 @@ const isDifferentSelection = (oldItem, newItem) => {
   }
 
   return !isValidOldValue;
-}
+};
 
-export { isButtonDisabled, isDifferentSelection };
+const filterItemsByPayloadCode = (items, code) =>
+  items.filter((item) => item.payload.code === code);
+
+export { isButtonDisabled, isDifferentSelection, filterItemsByPayloadCode };

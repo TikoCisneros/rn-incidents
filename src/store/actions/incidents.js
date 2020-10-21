@@ -1,3 +1,5 @@
+import { buildIncidentCatalogs } from "./util";
+
 const FETCH_INCIDENTS_LIST = {
   action: () => ({ type: FETCH_INCIDENTS_LIST.name }),
   name: 'FETCH_INCIDENTS_LIST',
@@ -22,10 +24,14 @@ const REQUEST_INCIDENTS_LIST = {
 };
 
 const SET_INCIDENT_CATALOGS = {
-  action: (catalogs) => ({
-    type: SET_INCIDENT_CATALOGS.name,
-    payload: { catalogs },
-  }),
+  action: (wsCatalogs) => {
+    const catalogs = buildIncidentCatalogs(wsCatalogs);
+
+    return {
+      type: SET_INCIDENT_CATALOGS.name,
+      payload: { catalogs },
+    };
+  },
   name: 'SET_INCIDENT_CATALOGS',
 };
 

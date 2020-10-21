@@ -11,4 +11,11 @@ const STATUS_TYPES = {
   none: 'statusNone',
 };
 
-export { PROMPT_TYPES, STATUS_TYPES };
+const CATALOG_NAMES = {
+  incidentSubtype: 'incidence_subtype',
+  incidentChannel: 'incidence_chanel',
+  incidentType: 'incidence_type',
+  incidentDefinition: 'incidence_definition',
+};
+
+export { PROMPT_TYPES, STATUS_TYPES, CATALOG_NAMES };

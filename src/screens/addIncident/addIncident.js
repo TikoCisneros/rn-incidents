@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AddIncidentComponent from '../../components/addIncident';
 
-import { isButtonDisabled, isDifferentSelection } from './util';
+import { isButtonDisabled, isDifferentSelection, filterItemsByPayloadCode } from './util';
 
 const items = [
   { value: 'item a', _id: '1' },
@@ -14,10 +14,11 @@ const items = [
   { value: 'item h', _id: '8' },
 ];
 
-const AddIncident = () => {
+const AddIncident = ({ definitions, types, subtypes }) => {
   const [definition, setDefinition] = useState({});
   const [type, setType] = useState({});
   const [subtype, setSubtype] = useState({});
+  const [catalogs, setCatalogs] = useState({ myTypes: [], mySubtypes: [] });
 
   const handleAddPress = () => alert('go');
 
@@ -28,6 +29,10 @@ const AddIncident = () => {
       setDefinition(item);
       setType({});
       setSubtype({});
+      setCatalogs({
+        myTypes: filterItemsByPayloadCode(types, item.value),
+        mySubtypes: [],
+      });
     }
   };
 
@@ -37,6 +42,10 @@ const AddIncident = () => {
     if (isDifferentValue) {
       setType(item);
       setSubtype({});
+      setCatalogs({
+        ...catalogs,
+        mySubtypes: filterItemsByPayloadCode(subtypes, item.value),
+      });
     }
   };
 
@@ -45,13 +54,13 @@ const AddIncident = () => {
       onAddPress={handleAddPress}
       isButtonDisabled={isButtonDisabled(definition, type, subtype)}
       definitionValue={definition}
-      definitionItems={items}
+      definitionItems={definitions}
       onDefinitionPress={handleDefinitionPress}
       typeValue={type}
-      typeItems={items}
+      typeItems={catalogs.myTypes}
       onTypePress={handleTypePress}
       subtypeValue={subtype}
-      subtypeItems={items}
+      subtypeItems={catalogs.mySubtypes}
       onSubtypePress={(item) => setSubtype(item)}
     />
   );
