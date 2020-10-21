@@ -13,7 +13,9 @@
     "android:storybook-reverse": "adb reverse tcp:7007 tcp:7007",
     "storybook": "yarn run android:storybook-reverse; start-storybook -p 7007",
     "storybook:start": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "build:android:debug": "cd android && ./gradlew assembleDebug"
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.0.1",
