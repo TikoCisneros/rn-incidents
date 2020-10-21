@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomSheet component tests Should render correctly 1`] = `
+<RBSheet
+  animationType="slide"
+  closeDuration={200}
+  closeOnDragDown={true}
+  closeOnPressBack={true}
+  closeOnPressMask={false}
+  customStyles={
+    Object {
+      "container": Object {
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+      },
+      "draggableIcon": Object {
+        "backgroundColor": "#804ba1",
+      },
+      "wrapper": Object {
+        "backgroundColor": "rgba(46, 49, 49, 0.3)",
+      },
+    }
+  }
+  dragFromTopOnly={false}
+  height={200}
+  keyboardAvoidingViewEnabled={true}
+  minClosingHeight={0}
+  onClose={null}
+  onOpen={null}
+  openDuration={300}
+>
+  <View />
+</RBSheet>
+`;
