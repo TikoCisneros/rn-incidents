@@ -2,6 +2,7 @@ import {
   FETCH_INCIDENTS_LIST,
   SUCCESS_INCIDENTS_LIST,
   ERROR_INCIDENTS_LIST,
+  SET_INCIDENT_CATALOGS,
 } from '../actions/incidents';
 import { STATUS_TYPES } from '../../common/constants';
 import incidentsReducer from './incidents';
@@ -28,5 +29,14 @@ describe('Auth reducer tests', () => {
     const reducer = incidentsReducer(initialState, action);
     expect(reducer.status).toEqual(STATUS_TYPES.success);
     expect(reducer.incidents).toEqual(myIncidents);
+  });
+  it('should have catalogs when SET_INCIDENT_CATALOGS was dispatched', () => {
+    const myCatalogs = {};
+    const action = {
+      type: SET_INCIDENT_CATALOGS.name,
+      payload: { catalogs: myCatalogs },
+    };
+    const reducer = incidentsReducer(initialState, action);
+    expect(reducer.catalogs).toEqual(myCatalogs);
   });
 });

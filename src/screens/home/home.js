@@ -11,9 +11,7 @@ const Home = ({
   const [promptVisible, setPromptVisible] = useState(false);
 
   useEffect(() => {
-    const getIncidentsList = () => getIncidents();
-
-    getIncidentsList();
+    getIncidents();
   }, []);
 
   return (

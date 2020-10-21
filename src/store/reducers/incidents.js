@@ -3,6 +3,7 @@ import {
   FETCH_INCIDENTS_LIST,
   SUCCESS_INCIDENTS_LIST,
   ERROR_INCIDENTS_LIST,
+  SET_INCIDENT_CATALOGS,
 } from '../actions/incidents';
 
 import { createReducer } from '../util';
@@ -27,6 +28,12 @@ const auth = createReducer(initialState, {
     return {
       ...state,
       status: STATUS_TYPES.error,
+    };
+  },
+  [SET_INCIDENT_CATALOGS.name](state, { payload: { catalogs } }) {
+    return {
+      ...state,
+      catalogs,
     };
   },
 });

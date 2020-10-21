@@ -4,8 +4,10 @@ import {
   SUCCESS_INCIDENTS_LIST,
   ERROR_INCIDENTS_LIST,
   REQUEST_INCIDENTS_LIST,
+  SET_INCIDENT_CATALOGS,
+  REQUEST_INCIDENTS_CATALOGS,
 } from '../actions/incidents';
-import { obtainIncidents } from '../../api';
+import { obtainIncidents, obtainIncidentCatalogs } from '../../api';
 
 function* getIncidentsList() {
   try {
@@ -23,4 +25,22 @@ function* watchGetIncidentsList() {
   yield takeLatest(REQUEST_INCIDENTS_LIST.name, getIncidentsList);
 }
 
-export { watchGetIncidentsList, getIncidentsList };
+function* getIncidentCatalogs() {
+  try {
+    const { result: catalogs } = yield call(obtainIncidentCatalogs);
+
+    yield put(SET_INCIDENT_CATALOGS.action(catalogs));
+    // eslint-disable-next-line no-empty
+  } catch (_error) {}
+}
+
+function* watchGetIncidentCatalogs() {
+  yield takeLatest(REQUEST_INCIDENTS_CATALOGS.name, getIncidentCatalogs);
+}
+
+export {
+  watchGetIncidentsList,
+  getIncidentsList,
+  watchGetIncidentCatalogs,
+  getIncidentCatalogs,
+};
