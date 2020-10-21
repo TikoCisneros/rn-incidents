@@ -48,14 +48,14 @@ const Login = ({ onSubmit }) => {
                   onChangeText={handleChange(FORM_INPUT_VALUES.user)}
                   onBlur={handleBlur(FORM_INPUT_VALUES.user)}
                   value={values[FORM_INPUT_VALUES.user]}
-                  placeholder="Enter your username"
+                  placeholder="Escriba su usuario"
                   iconName={Icons.user}
                 />
                 <Input
                   onChangeText={handleChange(FORM_INPUT_VALUES.password)}
                   onBlur={handleBlur(FORM_INPUT_VALUES.password)}
                   value={values[FORM_INPUT_VALUES.password]}
-                  placeholder="Enter your password"
+                  placeholder="Escriba su contraseña"
                   secureTextEntry
                   iconName={Icons.lock}
                 />

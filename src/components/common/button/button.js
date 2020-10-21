@@ -8,7 +8,7 @@ const Button = ({ title, onPress, disabled, block, style, secondary }) => (
     onPress={onPress}
     disabled={disabled}
     style={style}
-    light={secondary}>
+    light={disabled ? !disabled : secondary}>
     <Text uppercase={false}>{title}</Text>
   </NBButton>
 );

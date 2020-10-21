@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
 
 import { Content } from '../common/content';
 import Button from '../common/button';
 import Palette from '../../styles/palette';
+import { getDeviceWidth } from '../../common/util';
 
 const gradientColors = [Palette.primary500, Palette.primary300, Palette.white];
 const gradientStart = { x: 0, y: 0 };
@@ -14,7 +14,7 @@ const ContentContainer = styled(Content)`
   justify-content: center;
 `;
 
-const { width } = Dimensions.get('window');
+const width = getDeviceWidth();
 
 const LogoContainer = styled.View`
   position: absolute;

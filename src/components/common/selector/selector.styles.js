@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 import { Card } from '../content';
 import Typography from '../typography';
@@ -21,7 +21,7 @@ const SelectorText = styled(Typography)`
 
 const SelectorIcon = styled(Icon)`
   color: ${Palette.primary500};
-  font-size: 25;
+  font-size: 25px;
 `;
 
 export { SelectorContainer, SelectorText, SelectorIcon };

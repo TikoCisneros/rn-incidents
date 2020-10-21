@@ -25,7 +25,7 @@ const Incidents = ({ incidents, loadStatus }) => {
         <IncidentsList
           data={incidents}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item, index) => `${item.id}-${index}`}
         />
       </ListSkeleton>
     </ListContainer>

@@ -29,6 +29,7 @@ const Input = ({
         placeholder={placeholder}
         autoCompleteType={autoCompleteType}
         secureTextEntry={secureTextEntry}
+        autoCapitalize="none"
       />
     </InputContainer>
     {isError && <ErrorLabel>{errorLabel}</ErrorLabel>}
