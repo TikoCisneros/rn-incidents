@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
 
 import Selector from '../common/selector';
-import Button from '../common/button';
 
 import BottomSheet from './bottomSheetSelectList';
 
-import { ContentContainer, Textarea, Image } from './addIncident.styles';
+import {
+  ContentContainer,
+  Textarea,
+  Image,
+  Button,
+} from './addIncident.styles';
 
 const PLACEHOLDER_DEFINITION = 'Elija una definición';
 const PLACEHOLDER_TYPE = 'Elija un tipo';
@@ -55,52 +59,54 @@ const AddIncident = ({
   };
 
   return (
-    <ContentContainer>
-      <Selector
-        placeholder={PLACEHOLDER_DEFINITION}
-        onPress={onPressDefinition}
-        value={definitionValue.value}
-      />
-      <Selector
-        placeholder={PLACEHOLDER_TYPE}
-        onPress={onPressType}
-        value={typeValue.value}
-      />
-      <Selector
-        placeholder={PLACEHOLDER_SUBTYPE}
-        onPress={onPressSubtype}
-        value={subtypeValue.value}
-      />
-      <Textarea
-        rowSpan={5}
-        bordered
-        placeholder={PLACEHOLDER_DESCRIPTION}
-        value={descriptionValue}
-        onChangeText={onDescriptionChange}
-      />
-      <Image source={imgUrl} resizeMode="cover" />
+    <>
+      <ContentContainer>
+        <Selector
+          placeholder={PLACEHOLDER_DEFINITION}
+          onPress={onPressDefinition}
+          value={definitionValue.value}
+        />
+        <Selector
+          placeholder={PLACEHOLDER_TYPE}
+          onPress={onPressType}
+          value={typeValue.value}
+        />
+        <Selector
+          placeholder={PLACEHOLDER_SUBTYPE}
+          onPress={onPressSubtype}
+          value={subtypeValue.value}
+        />
+        <Textarea
+          rowSpan={5}
+          bordered
+          placeholder={PLACEHOLDER_DESCRIPTION}
+          value={descriptionValue}
+          onChangeText={onDescriptionChange}
+        />
+        <Image source={imgUrl} resizeMode="cover" />
+        <BottomSheet
+          ref={refBSDefinition}
+          items={definitionItems}
+          onItemPress={onPressDefinitionItem}
+        />
+        <BottomSheet
+          ref={refBSType}
+          items={typeItems}
+          onItemPress={onPressTypeItem}
+        />
+        <BottomSheet
+          ref={refBSSubtype}
+          items={subtypeItems}
+          onItemPress={onPressSubtypeItem}
+        />
+      </ContentContainer>
       <Button
         title="Agregar"
         onPress={onAddPress}
         secondary
         disabled={isButtonDisabled}
       />
-      <BottomSheet
-        ref={refBSDefinition}
-        items={definitionItems}
-        onItemPress={onPressDefinitionItem}
-      />
-      <BottomSheet
-        ref={refBSType}
-        items={typeItems}
-        onItemPress={onPressTypeItem}
-      />
-      <BottomSheet
-        ref={refBSSubtype}
-        items={subtypeItems}
-        onItemPress={onPressSubtypeItem}
-      />
-    </ContentContainer>
+    </>
   );
 };
 
