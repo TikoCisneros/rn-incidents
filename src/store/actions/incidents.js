@@ -40,6 +40,15 @@ const REQUEST_INCIDENTS_CATALOGS = {
   name: 'REQUEST_INCIDENTS_CATALOGS',
 };
 
+const REQUEST_ADD_INCIDENT = {
+  action: (data, callback) => ({
+    type: REQUEST_ADD_INCIDENT.name,
+    data,
+    callback,
+  }),
+  name: 'REQUEST_ADD_INCIDENT',
+};
+
 export {
   FETCH_INCIDENTS_LIST,
   SUCCESS_INCIDENTS_LIST,
@@ -47,4 +56,5 @@ export {
   REQUEST_INCIDENTS_LIST,
   SET_INCIDENT_CATALOGS,
   REQUEST_INCIDENTS_CATALOGS,
+  REQUEST_ADD_INCIDENT,
 };

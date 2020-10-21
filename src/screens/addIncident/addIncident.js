@@ -7,14 +7,30 @@ import {
   filterItemsByPayloadCode,
 } from './util';
 
-const AddIncident = ({ definitions, types, subtypes }) => {
+const AddIncident = ({
+  definitions,
+  types,
+  subtypes,
+  addNewIncident,
+  getIncidents,
+  navigation: { goBack },
+}) => {
   const [definition, setDefinition] = useState({});
   const [type, setType] = useState({});
   const [subtype, setSubtype] = useState({});
   const [catalogs, setCatalogs] = useState({ myTypes: [], mySubtypes: [] });
   const [description, setDescription] = useState('');
 
-  const handleAddPress = () => alert('go');
+  const handleSuccessAddIncident = () => {
+    goBack();
+    getIncidents();
+  };
+
+  const handleAddPress = () =>
+    addNewIncident(
+      { definition, type, subtype, description },
+      handleSuccessAddIncident,
+    );
 
   const handleDefinitionPress = (item) => {
     const isDifferentValue = isDifferentSelection(definition, item);

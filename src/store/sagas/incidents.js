@@ -6,8 +6,14 @@ import {
   REQUEST_INCIDENTS_LIST,
   SET_INCIDENT_CATALOGS,
   REQUEST_INCIDENTS_CATALOGS,
+  REQUEST_ADD_INCIDENT,
 } from '../actions/incidents';
-import { obtainIncidents, obtainIncidentCatalogs } from '../../api';
+import {
+  obtainIncidents,
+  obtainIncidentCatalogs,
+  createIncident,
+} from '../../api';
+import { isFunction } from '../../common/util';
 
 function* getIncidentsList() {
   try {
@@ -38,9 +44,31 @@ function* watchGetIncidentCatalogs() {
   yield takeLatest(REQUEST_INCIDENTS_CATALOGS.name, getIncidentCatalogs);
 }
 
+function* addIncident(action) {
+  try {
+    const {
+      data: { definition, type, subtype, description },
+      callback,
+    } = action;
+
+    yield call(createIncident, { definition, type, subtype, description });
+
+    if (isFunction(callback)) {
+      callback();
+    }
+    // eslint-disable-next-line no-empty
+  } catch (_error) {}
+}
+
+function* watchAddIncident() {
+  yield takeLatest(REQUEST_ADD_INCIDENT.name, addIncident);
+}
+
 export {
   watchGetIncidentsList,
   getIncidentsList,
   watchGetIncidentCatalogs,
   getIncidentCatalogs,
+  watchAddIncident,
+  addIncident,
 };
