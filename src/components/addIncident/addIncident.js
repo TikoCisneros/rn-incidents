@@ -5,12 +5,14 @@ import Button from '../common/button';
 
 import BottomSheet from './bottomSheetSelectList';
 
-import { ContentContainer, Textarea } from './addIncident.styles';
+import { ContentContainer, Textarea, Image } from './addIncident.styles';
 
 const PLACEHOLDER_DEFINITION = 'Elija una definición';
 const PLACEHOLDER_TYPE = 'Elija un tipo';
 const PLACEHOLDER_SUBTYPE = 'Elija un subtipo';
 const PLACEHOLDER_DESCRIPTION = 'Agregue una descripción (Opcional)';
+
+const imgUrl = require('../../res/imgs/map.png');
 
 const AddIncident = ({
   onAddPress,
@@ -24,6 +26,8 @@ const AddIncident = ({
   subtypeItems,
   onSubtypePress,
   subtypeValue = {},
+  descriptionValue,
+  onDescriptionChange,
 }) => {
   const refBSDefinition = useRef();
   const refBSType = useRef();
@@ -67,7 +71,14 @@ const AddIncident = ({
         onPress={onPressSubtype}
         value={subtypeValue.value}
       />
-      <Textarea rowSpan={5} bordered placeholder={PLACEHOLDER_DESCRIPTION} />
+      <Textarea
+        rowSpan={5}
+        bordered
+        placeholder={PLACEHOLDER_DESCRIPTION}
+        value={descriptionValue}
+        onChangeText={onDescriptionChange}
+      />
+      <Image source={imgUrl} resizeMode="cover" />
       <Button
         title="Agregar"
         onPress={onAddPress}
