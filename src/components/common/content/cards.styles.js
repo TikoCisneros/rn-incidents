@@ -14,7 +14,6 @@ const boxesStyles = StyleSheet.create({
     elevation: 3,
     backgroundColor: Palette.white,
     marginHorizontal: 2,
-    padding: 2,
   },
 });
 
