@@ -6,6 +6,10 @@ const Icons = {
   warning: 'warning',
   danger: 'close-circle',
   chevronForward: 'chevron-forward-outline',
+  newspaper: 'newspaper',
+  newspaperOutline: 'newspaper-outline',
+  pulse: 'pulse',
+  pulseOutline: 'pulse-outline',
 };
 
 export default Icons;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { STATUS_TYPES } from '../../common/constants';
 import HomeComponent from '../../components/home';
-import { AppScreens } from '../../navigation/screens';
+import { IncidentsScreen } from '../../navigation/screens';
 
 const Home = ({
   username,
@@ -16,7 +16,7 @@ const Home = ({
     getIncidents();
   }, []);
 
-  const handleAddIncident = () => push(AppScreens.AddIncident);
+  const handleAddIncident = () => push(IncidentsScreen.AddIncident);
 
   return (
     <HomeComponent

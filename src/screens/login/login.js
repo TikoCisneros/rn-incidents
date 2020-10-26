@@ -13,7 +13,7 @@ const Login = ({
     fetchIncidentCatalogs();
   }, []);
 
-  const navigate = () => dispatch(StackActions.replace(AppScreens.Home));
+  const navigate = () => dispatch(StackActions.replace(AppScreens.App));
 
   const handleOnSubmit = (values, { resetForm }) => {
     const { user: username, password } = values;

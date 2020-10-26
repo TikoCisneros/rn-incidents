@@ -1,8 +1,21 @@
 const AppScreens = {
   Login: 'LoginScreen',
-  Home: 'HomeScreen',
+  App: 'AppScreen',
+};
+
+const MainScreens = {
+  FeedTab: 'FeedTabScreen',
+  IncidentsTab: 'IncidentsTabScreen',
+};
+
+const IncidentsScreen = {
+  HomeIncident: 'HomeIncidentScreen',
   AddIncident: 'AddIncidentScreen',
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { AppScreens };
+const FeedsScreens = {
+  Feeds: 'FeedsScreen',
+  FeedDetail: 'FeedDetailScreen',
+};
+
+export { AppScreens, MainScreens, IncidentsScreen, FeedsScreens };
