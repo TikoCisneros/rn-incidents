@@ -15,6 +15,7 @@ const newsData = Array(15)
     ],
     date: '21 jun 20',
     uri: 'https://dummyimage.com/960x540/D4D8E1/000',
+    author: 'Demo Author',
   }));
 
 const Feed = ({ navigation: { push } }) => {

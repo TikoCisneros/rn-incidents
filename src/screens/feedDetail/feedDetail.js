@@ -1,15 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import FeedDetails from '../../components/feedDetails';
 
 const FeedDetail = ({
   route: {
     params: { item },
   },
-}) => (
-  <View>
-    <Text>HOLA</Text>
-    <Text>{JSON.stringify(item)}</Text>
-  </View>
-);
+}) => <FeedDetails {...item} />;
 
 export default FeedDetail;
