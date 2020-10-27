@@ -1,4 +1,4 @@
-import { buildIncidentCatalogs } from "./util";
+import { buildIncidentCatalogs } from './util';
 
 const FETCH_INCIDENTS_LIST = {
   action: () => ({ type: FETCH_INCIDENTS_LIST.name }),
