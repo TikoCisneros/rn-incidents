@@ -1,12 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const FeedDetail = () => {
-  return (
-    <View>
-      <Text>FeedDetail</Text>
-    </View>
-  );
-};
+const FeedDetail = () => (
+  <View>
+    <Text>HOLA</Text>
+  </View>
+);
 
 export default FeedDetail;

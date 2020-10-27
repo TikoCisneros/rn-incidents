@@ -8,8 +8,8 @@ import {
   DateLabel,
 } from './principalNews.styles';
 
-const PrincipalNews = ({ title, date, uri }) => (
-  <CardContainer>
+const PrincipalNews = ({ title, date, uri, onPress }) => (
+  <CardContainer onPress={onPress}>
     <Image source={{ uri }} resizeMode="cover" />
     <TitleLabel type={TYPOGRAPHY_TYPES.HEADING_3}>{title}</TitleLabel>
     <DateLabel>{date}</DateLabel>

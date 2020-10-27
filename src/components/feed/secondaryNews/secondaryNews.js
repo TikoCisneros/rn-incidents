@@ -9,8 +9,8 @@ import {
   DateLabel,
 } from './secondaryNews.styles';
 
-const SecondaryNews = ({ title, date, uri }) => (
-  <CardContainer>
+const SecondaryNews = ({ title, date, uri, onPress }) => (
+  <CardContainer onPress={onPress}>
     <Image source={{ uri }} resizeMode="cover" />
     <InfoContainer>
       <TitleLabel type={TYPOGRAPHY_TYPES.HEADING_3}>{title}</TitleLabel>
