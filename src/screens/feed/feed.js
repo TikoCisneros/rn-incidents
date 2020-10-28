@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import FeedComponent from '../../components/feed';
+import InfoPrompt from '../../components/home/infoPrompt';
+import NavButton from '../../components/common/navButton';
 
 import { FeedsScreens } from '../../navigation/screens';
+import Icons from '../../styles/icons';
 
 const newsData = Array(15)
   .fill()
@@ -18,10 +21,30 @@ const newsData = Array(15)
     author: 'Demo Author',
   }));
 
-const Feed = ({ navigation: { push } }) => {
+const Feed = ({ navigation, navigation: { push } }) => {
+  const [promptVisible, setPromptVisible] = useState(false);
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <NavButton
+          iconName={Icons.info}
+          onPress={() => setPromptVisible(true)}
+        />
+      ),
+    });
+  }, [navigation]);
+
   const handleItemPress = (item) => push(FeedsScreens.FeedDetail, { item });
 
-  return <FeedComponent data={newsData} onItemPress={handleItemPress} />;
+  const handleHidePrompt = () => setPromptVisible(false);
+
+  return (
+    <>
+      <FeedComponent data={newsData} onItemPress={handleItemPress} />
+      <InfoPrompt visible={promptVisible} onHidePrompt={handleHidePrompt} />
+    </>
+  );
 };
 
 export default Feed;

@@ -8,7 +8,7 @@ const ButtonContainer = styled.TouchableOpacity`
 `;
 
 const ButtonIcon = styled(Icon)`
-  font-size: 25px;
+  font-size: 26px;
   color: ${Palette.white};
 `;
 
