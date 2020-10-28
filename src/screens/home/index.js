@@ -2,11 +2,7 @@ import { connect } from 'react-redux';
 import Home from './home';
 import { REQUEST_INCIDENTS_LIST } from '../../store/actions/incidents';
 
-const mapStateToProps = ({
-  auth: { username },
-  incidents: { status, incidents },
-}) => ({
-  username,
+const mapStateToProps = ({ incidents: { status, incidents } }) => ({
   status,
   incidents,
 });

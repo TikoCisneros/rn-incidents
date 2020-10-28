@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
 import FeedComponent from '../../components/feed';
-import InfoPrompt from '../../components/home/infoPrompt';
 import NavButton from '../../components/common/navButton';
 
 import { FeedsScreens } from '../../navigation/screens';
@@ -40,10 +39,12 @@ const Feed = ({ navigation, navigation: { push } }) => {
   const handleHidePrompt = () => setPromptVisible(false);
 
   return (
-    <>
-      <FeedComponent data={newsData} onItemPress={handleItemPress} />
-      <InfoPrompt visible={promptVisible} onHidePrompt={handleHidePrompt} />
-    </>
+    <FeedComponent
+      data={newsData}
+      onItemPress={handleItemPress}
+      promptVisible={promptVisible}
+      onHidePrompt={handleHidePrompt}
+    />
   );
 };
 

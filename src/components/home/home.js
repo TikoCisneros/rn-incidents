@@ -2,24 +2,13 @@ import React from 'react';
 import { Icon } from 'native-base';
 import PropTypes from 'prop-types';
 
-import Greeting from './greeting';
 import Incidents from '../incidents';
-import InfoPrompt from './infoPrompt';
 import { FabButton } from './home.styles';
 
 import Icons from '../../styles/icons';
 
-const Home = ({
-  userName,
-  incidents,
-  promptVisible,
-  onAddIncidentPress,
-  onShowPrompt,
-  onHidePrompt,
-  loadStatus,
-}) => (
+const Home = ({ incidents, onAddIncidentPress, loadStatus }) => (
   <>
-    <Greeting userName={userName} onPressInfo={onShowPrompt} />
     <Incidents incidents={incidents} loadStatus={loadStatus} />
     <FabButton
       active
@@ -28,17 +17,12 @@ const Home = ({
       onPress={onAddIncidentPress}>
       <Icon type="AntDesign" name={Icons.add} />
     </FabButton>
-    <InfoPrompt visible={promptVisible} onHidePrompt={onHidePrompt} />
   </>
 );
 
 Home.propTypes = {
-  userName: PropTypes.string.isRequired,
   incidents: PropTypes.array.isRequired,
-  promptVisible: PropTypes.bool.isRequired,
   onAddIncidentPress: PropTypes.func.isRequired,
-  onShowPrompt: PropTypes.func.isRequired,
-  onHidePrompt: PropTypes.func.isRequired,
   loadStatus: PropTypes.string.isRequired,
 };
 
