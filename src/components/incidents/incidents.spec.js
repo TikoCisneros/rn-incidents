@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { IncidentTitle } from './incidents.styles';
+import { IncidentsList } from './incidents.styles';
 import Incidents from './incidents';
 
 describe('Incidents component', () => {
@@ -17,6 +17,6 @@ describe('Incidents component', () => {
         ]}
       />,
     );
-    expect(wrapper.find(IncidentTitle)).toHaveLength(1);
+    expect(wrapper.find(IncidentsList)).toHaveLength(1);
   });
 });
