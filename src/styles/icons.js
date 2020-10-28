@@ -10,6 +10,7 @@ const Icons = {
   newspaperOutline: 'newspaper-outline',
   pulse: 'pulse',
   pulseOutline: 'pulse-outline',
+  share: 'share-social-outline',
 };
 
 export default Icons;

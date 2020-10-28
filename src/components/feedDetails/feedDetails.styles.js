@@ -2,6 +2,10 @@ import styled from 'styled-components/native';
 import Palette from '../../styles/palette';
 import Typography from '../common/typography';
 
+const ScreenContainer = styled.ScrollView`
+  flex: 1;
+`;
+
 const Image = styled.Image`
   width: 100%;
   height: 300px;
@@ -28,4 +32,11 @@ const NewsParagraph = styled(Typography)`
   text-align: justify;
 `;
 
-export { Image, NewsTitle, NewsDate, NewsAuthor, NewsParagraph };
+export {
+  ScreenContainer,
+  Image,
+  NewsTitle,
+  NewsDate,
+  NewsAuthor,
+  NewsParagraph,
+};
